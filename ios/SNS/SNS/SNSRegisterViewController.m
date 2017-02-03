@@ -25,8 +25,17 @@
     [self.view addSubview:label];
     
     UIButton *button = [UIButton new];
+    button.width = kCommonDeviceWidth / 2.0f;
+    button.height = 30;
+    button.y = self.view.centerY + 100;
+    button.centerX = self.view.centerX;
+    button.layer.borderWidth = 1.0f;
+    [button setTitle:@"はじめる" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-    
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(buttonPushed:) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 
@@ -35,5 +44,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)buttonPushed:(UIButton*)button{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 @end

@@ -19,6 +19,8 @@
 		BE19AA291E44BEA8001B9A30 /* ScrollViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA261E44BEA8001B9A30 /* ScrollViewFrameAccessor.m */; };
 		BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA281E44BEA8001B9A30 /* ViewFrameAccessor.m */; };
 		BE19AA311E44C7AE001B9A30 /* KYUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA301E44C7AE001B9A30 /* KYUtility.m */; };
+		BE19AA341E44DA74001B9A30 /* SNSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */; };
+		BE19AA371E44DF76001B9A30 /* SNSTabBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,10 @@
 		BE19AA2C1E44C580001B9A30 /* KYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYConst.h; sourceTree = "<group>"; };
 		BE19AA2F1E44C7AE001B9A30 /* KYUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYUtility.h; sourceTree = "<group>"; };
 		BE19AA301E44C7AE001B9A30 /* KYUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYUtility.m; sourceTree = "<group>"; };
+		BE19AA321E44DA74001B9A30 /* SNSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSTabBarController.h; sourceTree = "<group>"; };
+		BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSTabBarController.m; sourceTree = "<group>"; };
+		BE19AA351E44DF76001B9A30 /* SNSTabBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSTabBarManager.h; sourceTree = "<group>"; };
+		BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSTabBarManager.m; sourceTree = "<group>"; };
 		C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +105,10 @@
 				BE19A9FE1E44247D001B9A30 /* SNSAppDelegate.m */,
 				BE19AA001E44247D001B9A30 /* SNSRegisterViewController.h */,
 				BE19AA011E44247D001B9A30 /* SNSRegisterViewController.m */,
+				BE19AA321E44DA74001B9A30 /* SNSTabBarController.h */,
+				BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */,
+				BE19AA351E44DF76001B9A30 /* SNSTabBarManager.h */,
+				BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */,
 				BE19AA031E44247D001B9A30 /* Main.storyboard */,
 				BE19AA061E44247D001B9A30 /* Assets.xcassets */,
 				BE19AA081E44247D001B9A30 /* LaunchScreen.storyboard */,
@@ -301,6 +311,8 @@
 				BE19A9FF1E44247D001B9A30 /* SNSAppDelegate.m in Sources */,
 				BE19AA311E44C7AE001B9A30 /* KYUtility.m in Sources */,
 				BE19AA291E44BEA8001B9A30 /* ScrollViewFrameAccessor.m in Sources */,
+				BE19AA341E44DA74001B9A30 /* SNSTabBarController.m in Sources */,
+				BE19AA371E44DF76001B9A30 /* SNSTabBarManager.m in Sources */,
 				BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */,
 				BE19A9FC1E44247D001B9A30 /* main.m in Sources */,
 				BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */,
@@ -462,6 +474,7 @@
 				BE19AA101E44247D001B9A30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

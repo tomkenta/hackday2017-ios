@@ -8,6 +8,8 @@
 
 #import "SNSAppDelegate.h"
 #import "SNSRegisterViewController.h"
+#import "SNSTabBarManager.h"
+#import "SNSTabBarController.h"
 
 @interface SNSAppDelegate ()
 
@@ -21,13 +23,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.tintColor =  kThemeColor;
+    self.tabBarController = [[SNSTabBarManager sharedManager] tabBarController];
+    self.window.rootViewController = (UIViewController*)_tabBarController;
+
     [self.window makeKeyAndVisible];
     
     
     
     SNSRegisterViewController *rv = [SNSRegisterViewController new];
-    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:rv];
-    self.window.rootViewController = nv;
+//    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:rv];
+    [self.tabBarController presentViewController:rv animated:NO completion:nil];
     
 
     return YES;
