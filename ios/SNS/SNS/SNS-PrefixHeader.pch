@@ -1,0 +1,17 @@
+//
+//  SNS-PrefixHeader.pch
+//  SNS
+//
+//  Created by Kenta Yokota on 2/3/17.
+//  Copyright © 2017 Kenta Yokota. All rights reserved.
+//
+
+#ifndef SNS_PrefixHeader_pch
+#define SNS_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "SNSConst.h"
+#import "UIColor+KYkit.h"
+#endif /* SNS_PrefixHeader_pch */

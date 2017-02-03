@@ -6,17 +6,25 @@
 //  Copyright © 2017 Kenta Yokota. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SNSRegisterViewController.h"
 
-@interface ViewController ()
+@interface SNSRegisterViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SNSRegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UILabel *label = [UILabel new];
+    label.text = @"えすえぬえす";
+    [label sizeToFit];
+    label.center = self.view.center;
+    [self.view addSubview:label];
+
+     
 }
 
 

@@ -6,17 +6,30 @@
 //  Copyright © 2017 Kenta Yokota. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "SNSAppDelegate.h"
+#import "SNSRegisterViewController.h"
 
-@interface AppDelegate ()
+@interface SNSAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation SNSAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.tintColor =  kThemeColor;
+//    [self.window makeKeyAndVisible];
+    
+    
+    
+    SNSRegisterViewController *rv = [SNSRegisterViewController new];
+    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:rv];
+    self.window.rootViewController = nv;
+    
+
     return YES;
 }
 

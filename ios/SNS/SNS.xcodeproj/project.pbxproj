@@ -8,24 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		BE19A9FC1E44247D001B9A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A9FB1E44247D001B9A30 /* main.m */; };
-		BE19A9FF1E44247D001B9A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A9FE1E44247D001B9A30 /* AppDelegate.m */; };
-		BE19AA021E44247D001B9A30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA011E44247D001B9A30 /* ViewController.m */; };
+		BE19A9FF1E44247D001B9A30 /* SNSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A9FE1E44247D001B9A30 /* SNSAppDelegate.m */; };
+		BE19AA021E44247D001B9A30 /* SNSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA011E44247D001B9A30 /* SNSRegisterViewController.m */; };
 		BE19AA051E44247D001B9A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE19AA031E44247D001B9A30 /* Main.storyboard */; };
 		BE19AA071E44247D001B9A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE19AA061E44247D001B9A30 /* Assets.xcassets */; };
 		BE19AA0A1E44247D001B9A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE19AA081E44247D001B9A30 /* LaunchScreen.storyboard */; };
+		BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA191E445CAD001B9A30 /* UIColor+KYkit.m */; };
+		BE19AA1D1E445D0C001B9A30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE19AA1C1E445D0C001B9A30 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE19A9F71E44247D001B9A30 /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE19A9FB1E44247D001B9A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE19A9FD1E44247D001B9A30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BE19A9FE1E44247D001B9A30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE19AA001E44247D001B9A30 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BE19AA011E44247D001B9A30 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE19A9FD1E44247D001B9A30 /* SNSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSAppDelegate.h; sourceTree = "<group>"; };
+		BE19A9FE1E44247D001B9A30 /* SNSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSAppDelegate.m; sourceTree = "<group>"; };
+		BE19AA001E44247D001B9A30 /* SNSRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSRegisterViewController.h; sourceTree = "<group>"; };
+		BE19AA011E44247D001B9A30 /* SNSRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSRegisterViewController.m; sourceTree = "<group>"; };
 		BE19AA041E44247D001B9A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE19AA061E44247D001B9A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE19AA091E44247D001B9A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE19AA0B1E44247D001B9A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE19AA111E4425E3001B9A30 /* SNS-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNS-PrefixHeader.pch"; sourceTree = "<group>"; };
+		BE19AA121E442632001B9A30 /* SNSConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSConst.h; sourceTree = "<group>"; };
+		BE19AA181E445CAD001B9A30 /* UIColor+KYkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KYkit.h"; sourceTree = "<group>"; };
+		BE19AA191E445CAD001B9A30 /* UIColor+KYkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KYkit.m"; sourceTree = "<group>"; };
+		BE19AA1C1E445D0C001B9A30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE19AA1D1E445D0C001B9A30 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +50,10 @@
 		BE19A9EE1E44247D001B9A30 = {
 			isa = PBXGroup;
 			children = (
+				BE19AA131E442A0D001B9A30 /* KYkit */,
 				BE19A9F91E44247D001B9A30 /* SNS */,
 				BE19A9F81E44247D001B9A30 /* Products */,
+				BE19AA1B1E445D0C001B9A30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +68,14 @@
 		BE19A9F91E44247D001B9A30 /* SNS */ = {
 			isa = PBXGroup;
 			children = (
-				BE19A9FD1E44247D001B9A30 /* AppDelegate.h */,
-				BE19A9FE1E44247D001B9A30 /* AppDelegate.m */,
-				BE19AA001E44247D001B9A30 /* ViewController.h */,
-				BE19AA011E44247D001B9A30 /* ViewController.m */,
+				BE19AA121E442632001B9A30 /* SNSConst.h */,
+				BE19A9FD1E44247D001B9A30 /* SNSAppDelegate.h */,
+				BE19A9FE1E44247D001B9A30 /* SNSAppDelegate.m */,
+				BE19AA001E44247D001B9A30 /* SNSRegisterViewController.h */,
+				BE19AA011E44247D001B9A30 /* SNSRegisterViewController.m */,
 				BE19AA031E44247D001B9A30 /* Main.storyboard */,
 				BE19AA061E44247D001B9A30 /* Assets.xcassets */,
 				BE19AA081E44247D001B9A30 /* LaunchScreen.storyboard */,
-				BE19AA0B1E44247D001B9A30 /* Info.plist */,
 				BE19A9FA1E44247D001B9A30 /* Supporting Files */,
 			);
 			path = SNS;
@@ -74,9 +84,36 @@
 		BE19A9FA1E44247D001B9A30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE19AA0B1E44247D001B9A30 /* Info.plist */,
 				BE19A9FB1E44247D001B9A30 /* main.m */,
+				BE19AA111E4425E3001B9A30 /* SNS-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE19AA131E442A0D001B9A30 /* KYkit */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA141E442A28001B9A30 /* Category */,
+			);
+			name = KYkit;
+			sourceTree = "<group>";
+		};
+		BE19AA141E442A28001B9A30 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA181E445CAD001B9A30 /* UIColor+KYkit.h */,
+				BE19AA191E445CAD001B9A30 /* UIColor+KYkit.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		BE19AA1B1E445D0C001B9A30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA1C1E445D0C001B9A30 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE19AA021E44247D001B9A30 /* ViewController.m in Sources */,
-				BE19A9FF1E44247D001B9A30 /* AppDelegate.m in Sources */,
+				BE19AA021E44247D001B9A30 /* SNSRegisterViewController.m in Sources */,
+				BE19A9FF1E44247D001B9A30 /* SNSAppDelegate.m in Sources */,
+				BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */,
 				BE19A9FC1E44247D001B9A30 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";
 				INFOPLIST_FILE = SNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yokochinapp.SNS;
@@ -281,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";
 				INFOPLIST_FILE = SNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yokochinapp.SNS;

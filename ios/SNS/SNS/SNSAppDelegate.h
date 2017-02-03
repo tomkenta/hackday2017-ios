@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SNSAppDelegate.h
 //  SNS
 //
 //  Created by Kenta Yokota on 2/3/17.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SNSAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end
