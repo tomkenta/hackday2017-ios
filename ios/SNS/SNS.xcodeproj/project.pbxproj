@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44D480AAB0176D9B78BED50 /* libPods-SNS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBE8D08F1ACB7F56899B90 /* libPods-SNS.a */; };
 		BE19A9FC1E44247D001B9A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A9FB1E44247D001B9A30 /* main.m */; };
 		BE19A9FF1E44247D001B9A30 /* SNSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A9FE1E44247D001B9A30 /* SNSAppDelegate.m */; };
 		BE19AA021E44247D001B9A30 /* SNSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA011E44247D001B9A30 /* SNSRegisterViewController.m */; };
@@ -15,9 +16,14 @@
 		BE19AA0A1E44247D001B9A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE19AA081E44247D001B9A30 /* LaunchScreen.storyboard */; };
 		BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA191E445CAD001B9A30 /* UIColor+KYkit.m */; };
 		BE19AA1D1E445D0C001B9A30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE19AA1C1E445D0C001B9A30 /* UIKit.framework */; };
+		BE19AA291E44BEA8001B9A30 /* ScrollViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA261E44BEA8001B9A30 /* ScrollViewFrameAccessor.m */; };
+		BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA281E44BEA8001B9A30 /* ViewFrameAccessor.m */; };
+		BE19AA311E44C7AE001B9A30 /* KYUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA301E44C7AE001B9A30 /* KYUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B54AB9404907DDEBCBE27387 /* Pods-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.release.xcconfig"; sourceTree = "<group>"; };
+		B8FBE8D08F1ACB7F56899B90 /* libPods-SNS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE19A9F71E44247D001B9A30 /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE19A9FB1E44247D001B9A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE19A9FD1E44247D001B9A30 /* SNSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSAppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +39,15 @@
 		BE19AA181E445CAD001B9A30 /* UIColor+KYkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KYkit.h"; sourceTree = "<group>"; };
 		BE19AA191E445CAD001B9A30 /* UIColor+KYkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KYkit.m"; sourceTree = "<group>"; };
 		BE19AA1C1E445D0C001B9A30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE19AA241E44BEA8001B9A30 /* FrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameAccessor.h; sourceTree = "<group>"; };
+		BE19AA251E44BEA8001B9A30 /* ScrollViewFrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewFrameAccessor.h; sourceTree = "<group>"; };
+		BE19AA261E44BEA8001B9A30 /* ScrollViewFrameAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewFrameAccessor.m; sourceTree = "<group>"; };
+		BE19AA271E44BEA8001B9A30 /* ViewFrameAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFrameAccessor.h; sourceTree = "<group>"; };
+		BE19AA281E44BEA8001B9A30 /* ViewFrameAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFrameAccessor.m; sourceTree = "<group>"; };
+		BE19AA2C1E44C580001B9A30 /* KYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYConst.h; sourceTree = "<group>"; };
+		BE19AA2F1E44C7AE001B9A30 /* KYUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYUtility.h; sourceTree = "<group>"; };
+		BE19AA301E44C7AE001B9A30 /* KYUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYUtility.m; sourceTree = "<group>"; };
+		C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +56,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE19AA1D1E445D0C001B9A30 /* UIKit.framework in Frameworks */,
+				A44D480AAB0176D9B78BED50 /* libPods-SNS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AF277A92049CBE3920B442A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */,
+				B54AB9404907DDEBCBE27387 /* Pods-SNS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BE19A9EE1E44247D001B9A30 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +79,7 @@
 				BE19A9F91E44247D001B9A30 /* SNS */,
 				BE19A9F81E44247D001B9A30 /* Products */,
 				BE19AA1B1E445D0C001B9A30 /* Frameworks */,
+				5AF277A92049CBE3920B442A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +120,8 @@
 		BE19AA131E442A0D001B9A30 /* KYkit */ = {
 			isa = PBXGroup;
 			children = (
+				BE19AA221E44BEA8001B9A30 /* Vender */,
+				BE19AA2B1E44C545001B9A30 /* Utility */,
 				BE19AA141E442A28001B9A30 /* Category */,
 			);
 			name = KYkit;
@@ -112,8 +140,39 @@
 			isa = PBXGroup;
 			children = (
 				BE19AA1C1E445D0C001B9A30 /* UIKit.framework */,
+				B8FBE8D08F1ACB7F56899B90 /* libPods-SNS.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE19AA221E44BEA8001B9A30 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA231E44BEA8001B9A30 /* FrameAccessor */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		BE19AA231E44BEA8001B9A30 /* FrameAccessor */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA241E44BEA8001B9A30 /* FrameAccessor.h */,
+				BE19AA251E44BEA8001B9A30 /* ScrollViewFrameAccessor.h */,
+				BE19AA261E44BEA8001B9A30 /* ScrollViewFrameAccessor.m */,
+				BE19AA271E44BEA8001B9A30 /* ViewFrameAccessor.h */,
+				BE19AA281E44BEA8001B9A30 /* ViewFrameAccessor.m */,
+			);
+			path = FrameAccessor;
+			sourceTree = "<group>";
+		};
+		BE19AA2B1E44C545001B9A30 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BE19AA2C1E44C580001B9A30 /* KYConst.h */,
+				BE19AA2F1E44C7AE001B9A30 /* KYUtility.h */,
+				BE19AA301E44C7AE001B9A30 /* KYUtility.m */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE19AA0E1E44247D001B9A30 /* Build configuration list for PBXNativeTarget "SNS" */;
 			buildPhases = (
+				4A5DC218B498678D1C716DAC /* [CP] Check Pods Manifest.lock */,
 				BE19A9F31E44247D001B9A30 /* Sources */,
 				BE19A9F41E44247D001B9A30 /* Frameworks */,
 				BE19A9F51E44247D001B9A30 /* Resources */,
+				1D38113F7574A1F426F5B451 /* [CP] Embed Pods Frameworks */,
+				51777FC0A80AFD5F839DC2FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +244,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D38113F7574A1F426F5B451 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A5DC218B498678D1C716DAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51777FC0A80AFD5F839DC2FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE19A9F31E44247D001B9A30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,8 +299,11 @@
 			files = (
 				BE19AA021E44247D001B9A30 /* SNSRegisterViewController.m in Sources */,
 				BE19A9FF1E44247D001B9A30 /* SNSAppDelegate.m in Sources */,
+				BE19AA311E44C7AE001B9A30 /* KYUtility.m in Sources */,
+				BE19AA291E44BEA8001B9A30 /* ScrollViewFrameAccessor.m in Sources */,
 				BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */,
 				BE19A9FC1E44247D001B9A30 /* main.m in Sources */,
+				BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +419,7 @@
 		};
 		BE19AA0F1E44247D001B9A30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";
@@ -318,6 +432,7 @@
 		};
 		BE19AA101E44247D001B9A30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54AB9404907DDEBCBE27387 /* Pods-SNS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";

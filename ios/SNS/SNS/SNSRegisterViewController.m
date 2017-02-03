@@ -23,8 +23,10 @@
     [label sizeToFit];
     label.center = self.view.center;
     [self.view addSubview:label];
-
-     
+    
+    UIButton *button = [UIButton new];
+    
+    
 }
 
 

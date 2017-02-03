@@ -6,8 +6,6 @@
 //  Copyright © 2017 Kenta Yokota. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface SNSRegisterViewController : UIViewController
 
 

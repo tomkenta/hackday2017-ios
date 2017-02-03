@@ -6,8 +6,6 @@
 //  Copyright © 2017 Kenta Yokota. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface SNSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
