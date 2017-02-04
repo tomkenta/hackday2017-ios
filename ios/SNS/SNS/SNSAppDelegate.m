@@ -10,6 +10,7 @@
 #import "SNSRegisterViewController.h"
 #import "SNSTabBarManager.h"
 #import "SNSTabBarController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface SNSAppDelegate ()
 
@@ -19,7 +20,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.tintColor =  kThemeColor;
@@ -28,18 +32,18 @@
 
     [self.window makeKeyAndVisible];
     
-//    if ([FBSDKAccessToken currentAccessToken]) {
-        // User is logged in, do work such as go to next view controller.
-//    }
-    
-    
-    
-    
-    
-    SNSRegisterViewController *rv = [SNSRegisterViewController new];
-//    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:rv];
-    [self.tabBarController presentViewController:rv animated:NO completion:nil];
-    
+   if ([FBSDKAccessToken currentAccessToken]) {
+           [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+            startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+                if (!error) {
+                    KYLog(@"fetched user:%@", result);
+//                  KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString);
+                }
+            }];
+   } else {
+       SNSRegisterViewController *rv = [SNSRegisterViewController new];
+       [self.tabBarController presentViewController:rv animated:NO completion:nil];
+   }
 
     return YES;
 }
@@ -69,6 +73,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    // Add any custom logic here.
+    return handled;
 }
 
 

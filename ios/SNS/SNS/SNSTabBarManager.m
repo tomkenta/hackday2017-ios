@@ -8,6 +8,7 @@
 
 #import "SNSTabBarManager.h"
 #import "SNSTabBarController.h"
+#import "SNSSettingViewController.h"
 
 @implementation SNSTabBarManager
 
@@ -31,8 +32,9 @@
         ViewController1.view.backgroundColor = [UIColor grayColor];
         UINavigationController *nv0 = [[UINavigationController alloc] initWithRootViewController:ViewController1];
         
-        UIViewController *ViewController2 = [UIViewController new];
-        UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:ViewController2];
+        SNSSettingViewController *vc = [SNSSettingViewController new];
+        UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:vc];
+        
         
 
         _tabBarController = [SNSTabBarController new];

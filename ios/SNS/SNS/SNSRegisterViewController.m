@@ -7,9 +7,6 @@
 //
 
 #import "SNSRegisterViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-
 
 @interface SNSRegisterViewController ()
 
@@ -36,9 +33,12 @@
     button.layer.borderWidth = 1.0f;
     [button setTitle:@"はじめる" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.readPermissions = @[@"public_profile"];
+    _loginButton = button;
+    [self.view addSubview:_loginButton];
+    [_loginButton addTarget:self action:@selector(buttonPushed:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(buttonPushed:) forControlEvents:UIControlEventTouchUpInside];
+    
 
 }
 

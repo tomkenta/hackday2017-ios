@@ -22,6 +22,7 @@
 		BE19AA341E44DA74001B9A30 /* SNSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */; };
 		BE19AA371E44DF76001B9A30 /* SNSTabBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */; };
 		BE19AA3A1E456989001B9A30 /* SNSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA391E456989001B9A30 /* SNSApiClient.m */; };
+		BEE0AD041E45BA4000D9F439 /* SNSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSTabBarManager.m; sourceTree = "<group>"; };
 		BE19AA381E456989001B9A30 /* SNSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSApiClient.h; sourceTree = "<group>"; };
 		BE19AA391E456989001B9A30 /* SNSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSApiClient.m; sourceTree = "<group>"; };
+		BEE0AD021E45BA4000D9F439 /* SNSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSSettingViewController.h; sourceTree = "<group>"; };
+		BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSSettingViewController.m; sourceTree = "<group>"; };
 		C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +115,8 @@
 				BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */,
 				BE19AA351E44DF76001B9A30 /* SNSTabBarManager.h */,
 				BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */,
+				BEE0AD021E45BA4000D9F439 /* SNSSettingViewController.h */,
+				BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */,
 				BE19AA031E44247D001B9A30 /* Main.storyboard */,
 				BE19AA061E44247D001B9A30 /* Assets.xcassets */,
 				BE19AA081E44247D001B9A30 /* LaunchScreen.storyboard */,
@@ -322,6 +327,7 @@
 				BE19AA371E44DF76001B9A30 /* SNSTabBarManager.m in Sources */,
 				BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */,
 				BE19A9FC1E44247D001B9A30 /* main.m in Sources */,
+				BEE0AD041E45BA4000D9F439 /* SNSSettingViewController.m in Sources */,
 				BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
