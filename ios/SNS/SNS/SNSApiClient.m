@@ -26,7 +26,7 @@
 }
 
 + (NSString *)baseURL {
-    return @"https://esu-enu-esu.herokuapp.com/";
+    return @"https://esu-enu-esu.herokuapp.com/api/facebook/statuses";
 }
 
 + (void)cancelAll {

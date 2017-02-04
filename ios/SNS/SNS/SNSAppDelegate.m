@@ -12,6 +12,8 @@
 #import "SNSTabBarController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+#import "SNSApiClient.h"
+
 @interface SNSAppDelegate ()
 
 @end
@@ -32,12 +34,21 @@
 
     [self.window makeKeyAndVisible];
     
+    
    if ([FBSDKAccessToken currentAccessToken]) {
            [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
             startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
                 if (!error) {
                     KYLog(@"fetched user:%@", result);
-//                  KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString);
+                    KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString)
+                    KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_posts"] ? @"YES" : @"NO");
+                    [[SNSApiClient sharedClient] GET:[FBSDKAccessToken currentAccessToken].tokenString parameters:nil
+                                             success:^(NSURLSessionDataTask *task, id responseObject) {
+                                                 KYLog(@"responseObject %@",responseObject);
+                                            }
+                                             failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                                 NSLog(@"error");
+                                             }];
                 }
             }];
    } else {

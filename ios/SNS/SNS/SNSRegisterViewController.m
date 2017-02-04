@@ -33,12 +33,12 @@
     button.layer.borderWidth = 1.0f;
     [button setTitle:@"はじめる" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.readPermissions = @[@"public_profile"];
+///    button.readPermissions = @[@"public_profile", @"user_posts"];
     _loginButton = button;
+    _loginButton.readPermissions = @[@"public_profile", @"user_posts"];
     [self.view addSubview:_loginButton];
     [_loginButton addTarget:self action:@selector(buttonPushed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
+
 
 }
 
