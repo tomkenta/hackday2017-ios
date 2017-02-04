@@ -10,4 +10,7 @@
 
 @interface SNSTimeLineViewController : UIViewController
 
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSArray *posts;
+
 @end

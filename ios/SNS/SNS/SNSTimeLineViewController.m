@@ -7,27 +7,32 @@
 //
 
 #import "SNSTimeLineViewController.h"
+#import "SNSTimeLineCell.h"
+#import "SNSApiClient.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-@interface SNSTimeLineViewController () <UITableViewDataSource, UITableViewDelegate>
 
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *posts;
+@interface SNSTimeLineViewController () <UITableViewDataSource, UITableViewDelegate,SNSTimeLineCellDelegate>
 
 @end
 
 @implementation SNSTimeLineViewController
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    
-//    // UITableViewの設定
-//    [self.tableView registerClass:[TWTRTweetTableViewCell class] forCellReuseIdentifier:@"Cell"];
-//    self.tableView.hidden = YES;
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
-//    
-//    // TWTRLogInButtonの設定
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"ホーム";
+    
+    // UITableViewの設定
+    [self.tableView registerClass:[SNSTimeLineCell class] forCellReuseIdentifier:@"Cell"];
+    self.tableView.hidden = YES;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    [self loadPosts:[FBSDKAccessToken currentAccessToken].tokenString];
+    
+    
+    
+    // TWTRLogInButtonの設定
 //    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
 //        if (error) {
 //            NSLog(@"Error : %@", error);
@@ -41,57 +46,39 @@
 //    logInButton.center = self.view.center;
 //    self.logInButton = logInButton;
 //    [self.view addSubview:logInButton];
-//}
-//
+}
+
 //- (void)loadTweets:(NSString *)userId
-//{
-//    // タイムラインを取得
-//    NSString *endpoint = @"https://api.twitter.com/1.1/statuses/home_timeline.json";
-//    NSDictionary *parameters = @{};
-//    NSError *error = nil;
-//    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userId];
-//    NSURLRequest *request = [client URLRequestWithMethod:@"GET"
-//                                                     URL:endpoint
-//                                              parameters:parameters
-//                                                   error:&error];
-//    if (error) {
-//        NSLog(@"Error: %@", error);
-//        return;
-//    }
-//    __weak typeof(self) weakSelf = self;
-//    [client sendTwitterRequest:request
-//                    completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//                        if (connectionError) {
-//                            NSLog(@"Error: %@", error);
-//                            return;
-//                        }
-//                        NSError *jsonError = nil;
-//                        id jsonData = [NSJSONSerialization JSONObjectWithData:data
-//                                                                      options:NSJSONReadingMutableContainers
-//                                                                        error:&jsonError];
-//                        if (jsonError) {
-//                            NSLog(@"Error: %@", jsonError);
-//                            return;
-//                        }
-//                        weakSelf.tweets = [TWTRTweet tweetsWithJSONArray:jsonData];
-//                        [weakSelf.tableView reloadData];
-//                    }];
-//}
+- (void)loadPosts:(NSString *)accessToken
+{
+    // タイムラインを取得
+    [[SNSApiClient sharedClient] GET:accessToken
+                          parameters:nil
+                             success:^(NSURLSessionDataTask *task, id responseObject) {
+                                 KYLog(@"responseObject %@",responseObject);
+                             }
+                             failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                 KYLog(@"error :%@", error);
+                             }];
+
+}
 
 #pragma mark - UITableView
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [self.tweets count];
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    TWTRTweetTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    [cell configureWithTweet:self.tweets[indexPath.row]];
-//    return cell;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return [TWTRTweetTableViewCell heightForTweet:self.tweets[indexPath.row] width:self.tableView.bounds.size.width];
-//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.posts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SNSTimeLineCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//    [cell configureWithTweet:self.posts[indexPath.row]];
+    [cell configureWithPost:self.posts[indexPath.row]];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id object = self.posts[indexPath.row];
+    return [[SNSTimeLineCell class] cellHeightForObject:object];
+}
 
 @end

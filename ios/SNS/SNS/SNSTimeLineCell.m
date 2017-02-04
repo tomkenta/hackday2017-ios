@@ -70,6 +70,14 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
     return self;
 }
 
+- (void)configureWithPost:(NSDictionary *)post{
+       [_userIconButton sd_setImageWithURL:post[@"picture"]
+                                   forState:UIControlStateNormal
+                           placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
+    _nameLabel.text = post[@"text"];
+
+}
+
 //- (void)setUser:(SNSTimeLine *)user {
 //    _user = user;
 //    
