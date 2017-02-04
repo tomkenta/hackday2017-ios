@@ -224,6 +224,7 @@
 				TargetAttributes = {
 					BE19A9F61E44247D001B9A30 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = E6QUGA3SUU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -440,6 +441,7 @@
 			baseConfigurationReference = C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6QUGA3SUU;
 				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";
 				INFOPLIST_FILE = SNS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -454,6 +456,7 @@
 			baseConfigurationReference = B54AB9404907DDEBCBE27387 /* Pods-SNS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E6QUGA3SUU;
 				GCC_PREFIX_HEADER = "SNS/SNS-PrefixHeader.pch";
 				INFOPLIST_FILE = SNS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

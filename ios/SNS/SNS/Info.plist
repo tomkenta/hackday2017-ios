@@ -9,7 +9,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1346004138755510</string>
+				<string>fb1827691667482570</string>
 			</array>
 		</dict>
 	</array>
@@ -32,7 +32,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1346004138755510</string>
+	<string>1827691667482570</string>
 	<key>FacebookDisplayName</key>
 	<string>えすえぬえす</string>
 	<key>LSRequiresIPhoneOS</key>

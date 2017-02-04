@@ -28,6 +28,12 @@
 
     [self.window makeKeyAndVisible];
     
+//    if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
+//    }
+    
+    
+    
     
     
     SNSRegisterViewController *rv = [SNSRegisterViewController new];

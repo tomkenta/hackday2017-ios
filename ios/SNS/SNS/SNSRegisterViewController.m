@@ -11,7 +11,6 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 
-
 @interface SNSRegisterViewController ()
 
 @end
@@ -28,7 +27,8 @@
     label.center = self.view.center;
     [self.view addSubview:label];
     
-    UIButton *button = [UIButton new];
+//    UIButton *button = [UIButton new];
+    FBSDKLoginButton *button = [[FBSDKLoginButton alloc] init];    
     button.width = kCommonDeviceWidth / 2.0f;
     button.height = 30;
     button.y = self.view.centerY + 100;
