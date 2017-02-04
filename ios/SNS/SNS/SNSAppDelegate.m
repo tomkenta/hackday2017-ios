@@ -35,26 +35,29 @@
     [self.window makeKeyAndVisible];
     
     
-   if ([FBSDKAccessToken currentAccessToken]) {
-           [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
-            startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-                if (!error) {
-                    KYLog(@"fetched user:%@", result);
-                    KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString)
-                    KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_posts"] ? @"YES" : @"NO");
-                    [[SNSApiClient sharedClient] GET:[FBSDKAccessToken currentAccessToken].tokenString parameters:nil
+//   if Debug , uncommnet below.
+//    [FBSDKAccessToken setCurrentAccessToken:nil];
+//    KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString)
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+            KYLog(@"access token:%@", [FBSDKAccessToken currentAccessToken].tokenString)
+            KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"public_profile"] ? @"YES" : @"NO");
+            KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_posts"] ? @"YES" : @"NO");
+            KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_friends"] ? @"YES" : @"NO");
+                    
+                [[SNSApiClient sharedClient] GET:[FBSDKAccessToken currentAccessToken].tokenString parameters:nil
                                              success:^(NSURLSessionDataTask *task, id responseObject) {
                                                  KYLog(@"responseObject %@",responseObject);
                                             }
                                              failure:^(NSURLSessionDataTask *task, NSError *error) {
                                                  NSLog(@"error");
-                                             }];
-                }
-            }];
+                                             }];        
+//            }];
    } else {
        SNSRegisterViewController *rv = [SNSRegisterViewController new];
        [self.tabBarController presentViewController:rv animated:NO completion:nil];
    }
+    
 
     return YES;
 }

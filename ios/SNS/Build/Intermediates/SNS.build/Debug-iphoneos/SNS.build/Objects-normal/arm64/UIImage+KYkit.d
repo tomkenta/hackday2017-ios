@@ -1,4 +1,4 @@
-dependencies: /Users/Ken/Documents/hackday2017/ios/SNS/UIColor+KYkit.m \
+dependencies: /Users/Ken/Documents/hackday2017/ios/SNS/UIImage+KYkit.m \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNS-PrefixHeader.pch \
   /Users/Ken/Documents/hackday2017/ios/SNS/KYConst.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/KYUtility.h \

@@ -10,6 +10,6 @@
 #define SNSConst_h
 
 #define kThemeColor [UIColor colorWithHex:0xFF8F84]
-
+#define SNSTimeLineCellTextFont [UIFont systemFontOfSize:16.0f]
 
 #endif /* SNSConst_h */

@@ -7,6 +7,7 @@
 //
 
 #import "SNSRegisterViewController.h"
+#import "SNSApiClient.h"
 
 @interface SNSRegisterViewController ()
 
@@ -35,7 +36,7 @@
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 ///    button.readPermissions = @[@"public_profile", @"user_posts"];
     _loginButton = button;
-    _loginButton.readPermissions = @[@"public_profile", @"user_posts"];
+    _loginButton.readPermissions = @[@"public_profile", @"user_posts",@"user_friends"];
     [self.view addSubview:_loginButton];
     [_loginButton addTarget:self action:@selector(buttonPushed:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -51,5 +52,6 @@
 - (void)buttonPushed:(UIButton*)button{
     [self dismissViewControllerAnimated:NO completion:nil];
 }
+
 
 @end
