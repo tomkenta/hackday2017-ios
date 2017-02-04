@@ -12,4 +12,5 @@ dependencies: \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSConst.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTabBarManager.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTabBarController.h \
-  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSSettingViewController.h
+  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSSettingViewController.h \
+  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTimeLineViewController.h

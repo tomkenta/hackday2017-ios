@@ -28,10 +28,10 @@
     UITableView *settingTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
     settingTableView.delegate = self;
     settingTableView.dataSource = self;
-    //    settingTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    settingTableView.backgroundColor = kSNSBackgroundColor;
     
     settingTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [settingTableView.tableFooterView setBackgroundColor:[UIColor grayColor]];
+    [settingTableView.tableFooterView setBackgroundColor:kSNSBackgroundColor];
     [self.view addSubview:settingTableView];
     
 }

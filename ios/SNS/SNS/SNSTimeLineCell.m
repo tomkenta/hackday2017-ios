@@ -7,6 +7,8 @@
 //
 
 #import "SNSTimeLineCell.h"
+#import "SNSPost.h"
+
 
 const CGSize   SNSTimeLineCellIconSize          = {50.0f, 50.0f};
 const CGFloat  SNSTimeLineCellHorizontalPadding = 15.0f;
@@ -35,7 +37,8 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        self.clipsToBounds = NO;
+        self.clipsToBounds = YES;
+        self.contentView.clipsToBounds = YES;
         self.delegate = delegate;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.contentView.backgroundColor = [UIColor whiteColor];
@@ -47,35 +50,51 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
         _userIconButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
         _userIconButton.layer.borderColor = [UIColor colorWithHex:0xdddddd].CGColor;
         _userIconButton.clipsToBounds = YES;
+        _userIconButton.backgroundColor = [UIColor grayColor];
+//        [_userIconButton sd_setImageWithURL:nil
+//                                            forState:UIControlStateNormal
+//                                    placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
+        
         [_userIconButton addTarget:self action:@selector(_userIconButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_userIconButton];
         
         _dateLabel = [UILabel new];
         _dateLabel.font = [UIFont systemFontOfSize:12.0f];
         _dateLabel.textColor = kBlackColor54;
+        _dateLabel.text = @"へい";
         [_dateLabel setTextAlignment:NSTextAlignmentRight];
         [self.contentView addSubview:_dateLabel];
         
         _nameLabel = [UILabel new];
         _nameLabel.font = [UIFont boldSystemFontOfSize:14.0f];
         _nameLabel.textColor = [UIColor blackColor]; //todo 色テーマ
+        _nameLabel.text = @"ほげ";
         [self.contentView addSubview:_nameLabel];
         
         _textLabel = [UILabel new];
         _textLabel.font = SNSTimeLineCellTextFont;
         _textLabel.numberOfLines = 0;
+        _textLabel.text = @"ばふぁｓｆだｓふぁｓ";
         [self.contentView addSubview:_textLabel];
+        
+        [self addSubview:self.contentView];
         
     }
     return self;
 }
 
-- (void)configureWithPost:(NSDictionary *)post{
-       [_userIconButton sd_setImageWithURL:post[@"picture"]
-                                   forState:UIControlStateNormal
-                           placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
-    _nameLabel.text = post[@"text"];
-
+- (void)configureWithPost:(SNSPost *)post{
+//    [_userIconButton sd_setImageWithURL:[NSURL fileURLWithPath:[post picture_url]]
+//                                   forState:UIControlStateNormal
+//                           placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
+    _nameLabel.text = [post name];
+    _textLabel.text = [post text];    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM-dd hh:mm"];
+    NSString *date_converted = [formatter stringFromDate:[post time]];
+    _dateLabel.text = date_converted;
+    
+    
 }
 
 //- (void)setUser:(SNSTimeLine *)user {
@@ -118,10 +137,11 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
     [_textLabel setSize:CGSizeMake(SNSTimeLineCellMessageWidth, 0)];
     CGFloat height = [_textLabel.text getTextHeightWithFont:_textLabel.font viewWidth:_textLabel.width];
     _textLabel.height = height;
-    _textLabel.x = _dateLabel.x;
-    _textLabel.y = _userIconButton.bottom + SNSTimeLineCellSpace;
+    _textLabel.x = _nameLabel.x + SNSTimeLineCellSpace;
+    _textLabel.y = _nameLabel.bottom;
     
     self.contentView.height = _textLabel.bottom;
+//    self.contentView.height = 75;
     
 }
 

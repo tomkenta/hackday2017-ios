@@ -11,6 +11,8 @@
 @interface SNSTimeLineViewController : UIViewController
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) NSArray *posts;
+@property (strong, nonatomic) NSMutableArray *posts;
+
+
 
 @end

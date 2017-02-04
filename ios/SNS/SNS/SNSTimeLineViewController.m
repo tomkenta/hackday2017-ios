@@ -9,6 +9,7 @@
 #import "SNSTimeLineViewController.h"
 #import "SNSTimeLineCell.h"
 #import "SNSApiClient.h"
+#import "SNSPost.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 
@@ -22,16 +23,21 @@
     [super viewDidLoad];
     self.title = @"ホーム";
     
+    
     // UITableViewの設定
+    //self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView registerClass:[SNSTimeLineCell class] forCellReuseIdentifier:@"Cell"];
-    self.tableView.hidden = YES;
+    self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]  style:UITableViewStylePlain];
+
+    self.tableView.hidden = NO;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.backgroundColor = kSNSBackgroundColor;
+    
+    [self.view addSubview:self.tableView];
     
     [self loadPosts:[FBSDKAccessToken currentAccessToken].tokenString];
-    
-    
-    
+        
     // TWTRLogInButtonの設定
 //    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
 //        if (error) {
@@ -56,9 +62,26 @@
                           parameters:nil
                              success:^(NSURLSessionDataTask *task, id responseObject) {
                                  KYLog(@"responseObject %@",responseObject);
+                                 
+                                 NSArray * list = responseObject;
+                                 for (NSDictionary *p in list) {
+//                                    KYLog(@"responseObject %@",p[@"name"]);
+                                     //                                     KYLog(@"responseObject %@",p[@"text"]);
+                                     
+                                     SNSPost * post = [[SNSPost alloc] initWithAttributes:p];
+//                                     KYLog(@"text %@",post.text);
+                                     [self.posts addObject:post];
+                                 }
                              }
                              failure:^(NSURLSessionDataTask *task, NSError *error) {
                                  KYLog(@"error :%@", error);
+                                 NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                      @"http://hogehoge.com", @"picture",
+                                                      @"ken", @"name",
+                                                      @"最高です", @"text",
+                                                      @"12:10", @"time",
+                                                      nil];
+                                 [self.posts addObject:dic];
                              }];
 
 }
@@ -66,13 +89,34 @@
 #pragma mark - UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.posts count];
+    KYLog(@"count :%d", [self.posts count]);
+//    return [self.posts count];
+    return 3;
+
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SNSTimeLineCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    [cell configureWithTweet:self.posts[indexPath.row]];
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    SNSTimeLineCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//    [cell configureWithPost:self.posts[indexPath.row]];
+//    return cell;
+//}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"Cell";
+    SNSTimeLineCell *cell;
+    
+//      cellIdentifier = NSStringFromClass([SNSTimeLineCell class]);
+        cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = (SNSTimeLineCell *)[[[SNSTimeLineCell class] alloc] initWithReuseIdentifier:cellIdentifier delegate:self];
+        }
+
     [cell configureWithPost:self.posts[indexPath.row]];
+    KYLog(@"text %@",cell.nameLabel.text);
     return cell;
 }
 

@@ -9,6 +9,7 @@
 #import "SNSTabBarManager.h"
 #import "SNSTabBarController.h"
 #import "SNSSettingViewController.h"
+#import "SNSTimeLineViewController.h"
 
 @implementation SNSTabBarManager
 
@@ -28,17 +29,17 @@
     self = [super init];
     if (self) {
         
-        UIViewController *ViewController1 = [UIViewController new];
-        ViewController1.view.backgroundColor = [UIColor grayColor];
-        UINavigationController *nv0 = [[UINavigationController alloc] initWithRootViewController:ViewController1];
+        SNSTimeLineViewController *vc0 = [SNSTimeLineViewController new];
+        UINavigationController *nv0 = [[UINavigationController alloc] initWithRootViewController:vc0];
         
-        SNSSettingViewController *vc = [SNSSettingViewController new];
-        UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:vc];
+        SNSSettingViewController *vc1 = [SNSSettingViewController new];
+        UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:vc1];
         
         
 
         _tabBarController = [SNSTabBarController new];
         [_tabBarController setViewControllers:@[nv0,nv1]];
+
         
         [_tabBarController.tabBar.items[0] setTitle:NSLocalizedString(@"ホーム", nil)];
         [_tabBarController.tabBar.items[1] setTitle:NSLocalizedString(@"設定", nil)];

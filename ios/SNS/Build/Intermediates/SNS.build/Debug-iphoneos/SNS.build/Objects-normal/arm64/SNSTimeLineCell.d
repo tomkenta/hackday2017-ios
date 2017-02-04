@@ -10,4 +10,5 @@ dependencies: \
   /Users/Ken/Documents/hackday2017/ios/SNS/Vender/FrameAccessor/ViewFrameAccessor.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/Vender/FrameAccessor/ScrollViewFrameAccessor.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSConst.h \
-  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTimeLineCell.h
+  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTimeLineCell.h \
+  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSPost.h

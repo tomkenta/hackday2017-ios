@@ -29,6 +29,7 @@ extern const CGFloat  SNSTimeLineCellMargin;
 @property (nonatomic, strong) UILabel *nameLabel;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier delegate:(id<SNSTimeLineCellDelegate>)delegate;
+- (void)configureWithPost:(NSDictionary *)post;
 + (CGFloat)cellHeightForObject:(id)object;
 
 @end

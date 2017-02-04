@@ -18,6 +18,8 @@
 #import "UIColor+KYkit.h"
 #import "UIImage+KYkit.h"
 #import "NSString+KYkit.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
 #import "FrameAccessor.h"
 #import "SNSConst.h"
 #endif /* SNS_PrefixHeader_pch */

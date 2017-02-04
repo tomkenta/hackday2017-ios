@@ -27,6 +27,7 @@
 		BEE0AD0D1E46042400D9F439 /* SNSTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD0C1E46042400D9F439 /* SNSTimeLineCell.m */; };
 		BEE0AD101E46105900D9F439 /* UIImage+KYkit.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD0F1E46105900D9F439 /* UIImage+KYkit.m */; };
 		BEE0AD131E462A7700D9F439 /* NSString+KYkit.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD121E462A7700D9F439 /* NSString+KYkit.m */; };
+		BEE0AD161E46538000D9F439 /* SNSPost.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD151E46538000D9F439 /* SNSPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		BEE0AD0F1E46105900D9F439 /* UIImage+KYkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KYkit.m"; sourceTree = "<group>"; };
 		BEE0AD111E462A7700D9F439 /* NSString+KYkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KYkit.h"; sourceTree = "<group>"; };
 		BEE0AD121E462A7700D9F439 /* NSString+KYkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KYkit.m"; sourceTree = "<group>"; };
+		BEE0AD141E46538000D9F439 /* SNSPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSPost.h; sourceTree = "<group>"; };
+		BEE0AD151E46538000D9F439 /* SNSPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSPost.m; sourceTree = "<group>"; };
 		C39AC6B993094F1A643AB12F /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +132,8 @@
 				BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */,
 				BEE0AD021E45BA4000D9F439 /* SNSSettingViewController.h */,
 				BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */,
+				BEE0AD141E46538000D9F439 /* SNSPost.h */,
+				BEE0AD151E46538000D9F439 /* SNSPost.m */,
 				BEE0AD051E45E19500D9F439 /* TimeLine */,
 				BE19AA031E44247D001B9A30 /* Main.storyboard */,
 				BE19AA061E44247D001B9A30 /* Assets.xcassets */,
@@ -376,6 +381,7 @@
 				BEE0AD041E45BA4000D9F439 /* SNSSettingViewController.m in Sources */,
 				BEE0AD131E462A7700D9F439 /* NSString+KYkit.m in Sources */,
 				BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */,
+				BEE0AD161E46538000D9F439 /* SNSPost.m in Sources */,
 				BEE0AD101E46105900D9F439 /* UIImage+KYkit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
