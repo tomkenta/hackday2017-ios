@@ -13,9 +13,11 @@ const CGFloat  SNSTimeLineCellHorizontalPadding = 15.0f;
 const CGFloat  SNSTimeLineCellVerticalPadding   = 15.0f;
 const CGFloat  SNSTimeLineCellMargin            = 15.0f;
 
-CGFloat const YOTimelineCellSpace = 5.0f;
-CGFloat const YOTimelineCellButtonHeight   = 25.0f;
-CGFloat const YOTimelineCellContentMargin  = 16.0f;
+CGFloat const SNSTimeLineCellSpace = 5.0f;
+CGFloat const SNSTimeLineCellButtonHeight   = 25.0f;
+CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
+
+#define SNSTimeLineCellMessageWidth (kCommonDeviceWidth - 50 - 15 * 2 - 15)
 
 @interface SNSTimeLineCell () {
 @private
@@ -28,9 +30,6 @@ CGFloat const YOTimelineCellContentMargin  = 16.0f;
 
 @implementation SNSTimeLineCell
 
-+ (CGFloat)cellHeightForObject:(id)object{
-    return 75;
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier delegate:(id<SNSTimeLineCellDelegate>)delegate {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
@@ -105,10 +104,21 @@ CGFloat const YOTimelineCellContentMargin  = 16.0f;
     
     _nameLabel.y -= SNSTimeLineCellIconSize.height / 4.0f;
     _dateLabel.height = 12.0f;
-    _dateLabel.width = [_dateLabel.text getTextWidthWithFont:_dateLabel.font viewHeight:_dateLabel.height] + YOTimelineCellSpace * 2;
-        _dateLabel.origin = CGPointMake(kCommonDeviceWidth - _dateLabel.width - ( YOTimelineCellSpace * 2 ), _nameLabel.y - YOTimelineCellSpace);
+    _dateLabel.width = [_dateLabel.text getTextWidthWithFont:_dateLabel.font viewHeight:_dateLabel.height] + SNSTimeLineCellSpace * 2;
+    _dateLabel.origin = CGPointMake(kCommonDeviceWidth - _dateLabel.width - ( SNSTimeLineCellSpace * 2 ), _nameLabel.y - SNSTimeLineCellSpace);
     
+    [_textLabel setSize:CGSizeMake(SNSTimeLineCellMessageWidth, 0)];
+    CGFloat height = [_textLabel.text getTextHeightWithFont:_textLabel.font viewWidth:_textLabel.width];
+    _textLabel.height = height;
+    _textLabel.x = _dateLabel.x;
+    _textLabel.y = _userIconButton.bottom + SNSTimeLineCellSpace;
     
+    self.contentView.height = _textLabel.bottom;
+    
+}
+
++ (CGFloat)cellHeightForObject:(id)object{
+    return 75; // todo
 }
 
 
