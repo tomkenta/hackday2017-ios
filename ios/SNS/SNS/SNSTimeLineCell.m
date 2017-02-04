@@ -106,11 +106,7 @@ CGFloat const YOTimelineCellContentMargin  = 16.0f;
     _nameLabel.y -= SNSTimeLineCellIconSize.height / 4.0f;
     _dateLabel.height = 12.0f;
     _dateLabel.width = [_dateLabel.text getTextWidthWithFont:_dateLabel.font viewHeight:_dateLabel.height] + YOTimelineCellSpace * 2;
-    _dateLabel.viewOrigin
-    
-    
-
-//    _dateLabel.origin = CGPointMake(kCommonDeviceWidth - _dateLabel.width - ( YOTimelineCellSpace * 2 ), _nameLabel.y - YOTimelineCellSpace);
+        _dateLabel.origin = CGPointMake(kCommonDeviceWidth - _dateLabel.width - ( YOTimelineCellSpace * 2 ), _nameLabel.y - YOTimelineCellSpace);
     
     
 }

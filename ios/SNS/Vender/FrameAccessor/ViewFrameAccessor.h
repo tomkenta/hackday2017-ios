@@ -6,23 +6,14 @@
 //  Copyright (c) 2013 okolodev.org. All rights reserved.
 //
 
-
-#define IS_IOS_DEVICE (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
-
-#if IS_IOS_DEVICE
-    #import <UIKit/UIKit.h>
-    #define View UIView
-#else
-    #import <Foundation/Foundation.h>
-    #define View NSView
-#endif
+#import <UIKit/UIKit.h>
 
 
-@interface View (FrameAccessor)
+@interface UIView (FrameAccessor)
 
 // Frame
-@property (nonatomic) CGPoint viewOrigin;
-@property (nonatomic) CGSize viewSize;
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGSize size;
 
 // Frame Origin
 @property (nonatomic) CGFloat x;

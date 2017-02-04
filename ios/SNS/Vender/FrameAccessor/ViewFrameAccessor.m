@@ -8,32 +8,65 @@
 
 #import "ViewFrameAccessor.h"
 
-
-@implementation View (FrameAccessor)
+@implementation UIView (FrameAccessor)
 
 #pragma mark Frame
 
-- (CGPoint)viewOrigin
+- (CGPoint)origin
 {
     return self.frame.origin;
 }
 
-- (void)setViewOrigin:(CGPoint)newOrigin
+- (void)setOrigin:(CGPoint)origin
 {
     CGRect newFrame = self.frame;
-    newFrame.origin = newOrigin;
+    newFrame.origin = origin;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
-- (CGSize)viewSize
+- (CGSize)size
 {
     return self.frame.size;
 }
 
-- (void)setViewSize:(CGSize)newSize
+- (void)setSize:(CGSize)size
 {
     CGRect newFrame = self.frame;
-    newFrame.size = newSize;
+    newFrame.size = size;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
@@ -49,6 +82,23 @@
 {
     CGRect newFrame = self.frame;
     newFrame.origin.x = newX;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
@@ -61,6 +111,23 @@
 {
     CGRect newFrame = self.frame;
     newFrame.origin.y = newY;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
@@ -76,6 +143,23 @@
 {
     CGRect newFrame = self.frame;
     newFrame.size.height = newHeight;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
@@ -88,6 +172,23 @@
 {
     CGRect newFrame = self.frame;
     newFrame.size.width = newWidth;
+    
+    if(newFrame.origin.x != newFrame.origin.x){
+        newFrame.origin.x = 0;
+    }
+    
+    if(newFrame.origin.y != newFrame.origin.y){
+        newFrame.origin.y = 0;
+    }
+    
+    if(newFrame.size.width != newFrame.size.width){
+        newFrame.size.width = 0;
+    }
+    
+    if(newFrame.size.height != newFrame.size.height){
+        newFrame.size.height = 0;
+    }
+    
     self.frame = newFrame;
 }
 
