@@ -10,6 +10,7 @@ target 'SNS' do
   pod 'SVProgressHUD'
   pod 'RMUniversalAlert',        '~> 0.7'
   pod 'RDVTabBarController',      '~> 1.1.3'
+  pod 'Facebook-iOS-SDK'
   # Pods for SNS
 
 end
