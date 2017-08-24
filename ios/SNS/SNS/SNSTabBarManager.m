@@ -11,6 +11,7 @@
 #import "SNSSettingViewController.h"
 #import "SNSTimeLineViewController.h"
 
+
 @implementation SNSTabBarManager
 
 +(SNSTabBarManager*)sharedManager{

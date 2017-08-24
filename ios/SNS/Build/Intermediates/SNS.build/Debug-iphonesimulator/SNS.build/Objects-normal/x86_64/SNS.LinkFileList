@@ -1,4 +1,5 @@
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSApiClient.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSTimeLineCell.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSRegisterViewController.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSAppDelegate.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/KYUtility.o
@@ -6,5 +7,11 @@
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSTabBarController.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSTabBarManager.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/UIColor+KYkit.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSTimeLineViewController.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/main.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSPosts.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSSettingViewController.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/NSString+KYkit.o
 /Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/ViewFrameAccessor.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/SNSPost.o
+/Users/Ken/Documents/hackday2017/ios/SNS/Build/Intermediates/SNS.build/Debug-iphonesimulator/SNS.build/Objects-normal/x86_64/UIImage+KYkit.o

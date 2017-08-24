@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>RHMGETKLA3.com.yokochinapp.SNS</string>
+	<string>E6QUGA3SUU.com.yokochinapp.SNS</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>RHMGETKLA3.com.yokochinapp.SNS</string>
+		<string>E6QUGA3SUU.com.yokochinapp.SNS</string>
 	</array>
 </dict>
 </plist>

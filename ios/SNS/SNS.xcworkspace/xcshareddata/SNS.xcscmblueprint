@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "953A671E778DB5080F44A909EA0B22D0B85CFB8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "953A671E778DB5080F44A909EA0B22D0B85CFB8B" : 9223372036854775807,
+    "24F3EFCB93F97BFDD3301BE492770E8DCF868020" : 9223372036854775807,
+    "2085D4F568A9F6649B61A1FF828A23EF3C903D26" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "54FA0CA2-B26D-4AED-9AF0-A4DECD8DA8D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "953A671E778DB5080F44A909EA0B22D0B85CFB8B" : "hackday2017\/",
+    "24F3EFCB93F97BFDD3301BE492770E8DCF868020" : "iOSProjects\/YO\/nnkit\/",
+    "2085D4F568A9F6649B61A1FF828A23EF3C903D26" : "iOSProjects\/YO\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SNS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/SNS\/SNS.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/bitiapps\/yochat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2085D4F568A9F6649B61A1FF828A23EF3C903D26"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/bitiapps\/nnkit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24F3EFCB93F97BFDD3301BE492770E8DCF868020"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tomkenta\/hackday2017-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "953A671E778DB5080F44A909EA0B22D0B85CFB8B"
+    }
+  ]
+}

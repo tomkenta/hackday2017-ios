@@ -14,4 +14,5 @@ dependencies: \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSRegisterViewController.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTabBarManager.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSTabBarController.h \
+  /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSPosts.h \
   /Users/Ken/Documents/hackday2017/ios/SNS/SNS/SNSApiClient.h

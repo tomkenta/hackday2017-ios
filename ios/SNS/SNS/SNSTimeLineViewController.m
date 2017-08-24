@@ -10,6 +10,7 @@
 #import "SNSTimeLineCell.h"
 #import "SNSApiClient.h"
 #import "SNSPost.h"
+#import "SNSPosts.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 
@@ -18,6 +19,11 @@
 @end
 
 @implementation SNSTimeLineViewController
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,16 +34,20 @@
     //self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView registerClass:[SNSTimeLineCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]  style:UITableViewStylePlain];
-
+;
     self.tableView.hidden = NO;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = kSNSBackgroundColor;
+
     
+    self.posts = [[NSMutableArray alloc] initWithCapacity:100];
+    KYLog("%@",[FBSDKAccessToken currentAccessToken].tokenString)
+    [self loadPosts:[FBSDKAccessToken currentAccessToken].tokenString]; ////todo tokenがない場合はおちる
+    [self.tableView reloadData];
+
     [self.view addSubview:self.tableView];
     
-    [self loadPosts:[FBSDKAccessToken currentAccessToken].tokenString];
-        
     // TWTRLogInButtonの設定
 //    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
 //        if (error) {
@@ -64,14 +74,17 @@
                                  KYLog(@"responseObject %@",responseObject);
                                  
                                  NSArray * list = responseObject;
+                                 NSMutableArray * posts = [NSMutableArray new];
                                  for (NSDictionary *p in list) {
 //                                    KYLog(@"responseObject %@",p[@"name"]);
                                      //                                     KYLog(@"responseObject %@",p[@"text"]);
                                      
                                      SNSPost * post = [[SNSPost alloc] initWithAttributes:p];
 //                                     KYLog(@"text %@",post.text);
-                                     [self.posts addObject:post];
+                                     [posts addObject:post];
                                  }
+                                 self.posts = posts;
+                                 [self.tableView reloadData];
                              }
                              failure:^(NSURLSessionDataTask *task, NSError *error) {
                                  KYLog(@"error :%@", error);
@@ -90,8 +103,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     KYLog(@"count :%d", [self.posts count]);
-//    return [self.posts count];
-    return 3;
+    return [self.posts count];
+//    return 3;
 
 }
 
@@ -101,9 +114,16 @@
 //    return cell;
 //}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 1.0f;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return nil;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"Cell";
@@ -116,7 +136,7 @@
         }
 
     [cell configureWithPost:self.posts[indexPath.row]];
-    KYLog(@"text %@",cell.nameLabel.text);
+//    [cell configureWithPost:[SNSPosts sharedPosts].posts[indexPath.row]];
     return cell;
 }
 

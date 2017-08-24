@@ -11,7 +11,7 @@
 #import "SNSTabBarManager.h"
 #import "SNSTabBarController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-
+#import "SNSPosts.h"
 #import "SNSApiClient.h"
 
 @interface SNSAppDelegate ()
@@ -25,6 +25,7 @@
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    if ([FBSDKAccessToken currentAccessToken])  [SNSPosts sharedPosts];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -44,14 +45,18 @@
             KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"public_profile"] ? @"YES" : @"NO");
             KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_posts"] ? @"YES" : @"NO");
             KYLog(@"permmsion:%@", [[FBSDKAccessToken currentAccessToken] hasGranted:@"user_friends"] ? @"YES" : @"NO");
-                    
-                [[SNSApiClient sharedClient] GET:[FBSDKAccessToken currentAccessToken].tokenString parameters:nil
-                                             success:^(NSURLSessionDataTask *task, id responseObject) {
-                                                 KYLog(@"responseObject %@",responseObject);
-                                            }
-                                             failure:^(NSURLSessionDataTask *task, NSError *error) {
-                                                 NSLog(@"error");
-                                             }];        
+        
+
+
+        
+//                [[SNSApiClient sharedClient] GET:[FBSDKAccessToken currentAccessToken].tokenString parameters:nil
+//                                             success:^(NSURLSessionDataTask *task, id responseObject) {
+//                                                 KYLog(@"responseObject %@",responseObject);
+//                                            }
+//                                             failure:^(NSURLSessionDataTask *task, NSError *error) {
+//                                                 NSLog(@"error");
+//                                             }];
+        
 //            }];
    } else {
        SNSRegisterViewController *rv = [SNSRegisterViewController new];

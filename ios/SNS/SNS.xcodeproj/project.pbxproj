@@ -22,6 +22,7 @@
 		BE19AA341E44DA74001B9A30 /* SNSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA331E44DA74001B9A30 /* SNSTabBarController.m */; };
 		BE19AA371E44DF76001B9A30 /* SNSTabBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */; };
 		BE19AA3A1E456989001B9A30 /* SNSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19AA391E456989001B9A30 /* SNSApiClient.m */; };
+		BE38580C1E468A430032F1CE /* SNSPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = BE38580B1E468A430032F1CE /* SNSPosts.m */; };
 		BEE0AD041E45BA4000D9F439 /* SNSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */; };
 		BEE0AD081E45E1FA00D9F439 /* SNSTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD071E45E1FA00D9F439 /* SNSTimeLineViewController.m */; };
 		BEE0AD0D1E46042400D9F439 /* SNSTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AD0C1E46042400D9F439 /* SNSTimeLineCell.m */; };
@@ -62,6 +63,8 @@
 		BE19AA361E44DF76001B9A30 /* SNSTabBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSTabBarManager.m; sourceTree = "<group>"; };
 		BE19AA381E456989001B9A30 /* SNSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSApiClient.h; sourceTree = "<group>"; };
 		BE19AA391E456989001B9A30 /* SNSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSApiClient.m; sourceTree = "<group>"; };
+		BE38580A1E468A430032F1CE /* SNSPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSPosts.h; sourceTree = "<group>"; };
+		BE38580B1E468A430032F1CE /* SNSPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSPosts.m; sourceTree = "<group>"; };
 		BEE0AD021E45BA4000D9F439 /* SNSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSSettingViewController.h; sourceTree = "<group>"; };
 		BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSSettingViewController.m; sourceTree = "<group>"; };
 		BEE0AD061E45E1FA00D9F439 /* SNSTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSTimeLineViewController.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				BEE0AD031E45BA4000D9F439 /* SNSSettingViewController.m */,
 				BEE0AD141E46538000D9F439 /* SNSPost.h */,
 				BEE0AD151E46538000D9F439 /* SNSPost.m */,
+				BE38580A1E468A430032F1CE /* SNSPosts.h */,
+				BE38580B1E468A430032F1CE /* SNSPosts.m */,
 				BEE0AD051E45E19500D9F439 /* TimeLine */,
 				BE19AA031E44247D001B9A30 /* Main.storyboard */,
 				BE19AA061E44247D001B9A30 /* Assets.xcassets */,
@@ -378,6 +383,7 @@
 				BE19AA1A1E445CAD001B9A30 /* UIColor+KYkit.m in Sources */,
 				BEE0AD081E45E1FA00D9F439 /* SNSTimeLineViewController.m in Sources */,
 				BE19A9FC1E44247D001B9A30 /* main.m in Sources */,
+				BE38580C1E468A430032F1CE /* SNSPosts.m in Sources */,
 				BEE0AD041E45BA4000D9F439 /* SNSSettingViewController.m in Sources */,
 				BEE0AD131E462A7700D9F439 /* NSString+KYkit.m in Sources */,
 				BE19AA2A1E44BEA8001B9A30 /* ViewFrameAccessor.m in Sources */,

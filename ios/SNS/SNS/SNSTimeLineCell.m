@@ -24,7 +24,9 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
 @interface SNSTimeLineCell () {
 @private
     
+    UIView  *_baseContentsView;
     UILabel *_textLabel;
+    
     UILabel *_dateLabel;
     
 }
@@ -38,13 +40,23 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
-        self.contentView.clipsToBounds = YES;
+        self.contentView.clipsToBounds = NO;
         self.delegate = delegate;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.contentView.backgroundColor = [UIColor whiteColor];
+
+        
+        
         self.selectedBackgroundView = [[UIImageView alloc] initWithImage:
                                        [UIImage imageWithColor:[kBlackColor87 colorWithAlphaComponent:0.1f]
                                                       withSize:self.frame.size]]; //todo 色テーマ
+        _baseContentsView = [UIView new];
+        _baseContentsView.backgroundColor = [UIColor whiteColor];
+        _baseContentsView.layer.borderWidth = 0.5f;
+        _baseContentsView.layer.borderColor = kSNSBlackColor.CGColor;
+        _baseContentsView.layer.cornerRadius = 3.0f;
+
+        [self.contentView addSubview:_baseContentsView];
+        self.contentView.backgroundColor = [UIColor clearColor];
         
         _userIconButton = [UIButton new];
         _userIconButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -56,44 +68,42 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
 //                                    placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
         
         [_userIconButton addTarget:self action:@selector(_userIconButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:_userIconButton];
+        [_baseContentsView addSubview:_userIconButton];
         
         _dateLabel = [UILabel new];
         _dateLabel.font = [UIFont systemFontOfSize:12.0f];
         _dateLabel.textColor = kBlackColor54;
-        _dateLabel.text = @"へい";
         [_dateLabel setTextAlignment:NSTextAlignmentRight];
-        [self.contentView addSubview:_dateLabel];
+        [_baseContentsView addSubview:_dateLabel];
         
         _nameLabel = [UILabel new];
         _nameLabel.font = [UIFont boldSystemFontOfSize:14.0f];
         _nameLabel.textColor = [UIColor blackColor]; //todo 色テーマ
-        _nameLabel.text = @"ほげ";
-        [self.contentView addSubview:_nameLabel];
+        [_baseContentsView addSubview:_nameLabel];
         
         _textLabel = [UILabel new];
         _textLabel.font = SNSTimeLineCellTextFont;
         _textLabel.numberOfLines = 0;
-        _textLabel.text = @"ばふぁｓｆだｓふぁｓ";
-        [self.contentView addSubview:_textLabel];
+
+        [_baseContentsView addSubview:_textLabel];
         
-        [self addSubview:self.contentView];
+        
+//        [self addSubview:self.contentView];
         
     }
     return self;
 }
 
 - (void)configureWithPost:(SNSPost *)post{
-//    [_userIconButton sd_setImageWithURL:[NSURL fileURLWithPath:[post picture_url]]
-//                                   forState:UIControlStateNormal
-//                           placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
+    [_userIconButton sd_setImageWithURL:[NSURL URLWithString:[post picture_url]]
+                                   forState:UIControlStateNormal
+                           placeholderImage:[UIImage imageNamed:@"tl_ic_placefolder"]];
     _nameLabel.text = [post name];
     _textLabel.text = [post text];    
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM-dd hh:mm"];
     NSString *date_converted = [formatter stringFromDate:[post time]];
     _dateLabel.text = date_converted;
-    
     
 }
 
@@ -113,6 +123,11 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    _baseContentsView.frame = CGRectMake(kMargin8,
+                                         kMargin8,
+                                         kCommonDeviceWidth - kMargin8 * 2,
+                                         0);
     
     _userIconButton.frame = CGRectMake(SNSTimeLineCellHorizontalPadding,
                                        SNSTimeLineCellVerticalPadding,
@@ -141,12 +156,16 @@ CGFloat const SNSTimeLineCellContentMargin  = 16.0f;
     _textLabel.y = _nameLabel.bottom;
     
     self.contentView.height = _textLabel.bottom;
-//    self.contentView.height = 75;
-    
 }
 
 + (CGFloat)cellHeightForObject:(id)object{
-    return 75; // todo
+    SNSPost * post = object;
+    CGFloat textHeight = post.text.length > 0 ? [post.text getTextHeightWithFont:SNSTimeLineCellTextFont viewWidth:SNSTimeLineCellMessageWidth] : 0;
+    
+    CGFloat minHeight = SNSTimeLineCellIconSize.height + textHeight;
+    
+    return minHeight;
+//    return 75; // todo
 }
 
 
